@@ -1,26 +1,48 @@
 @import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
 
+:root{
+    --cor-primaria: #000;
+    --cor-secundaria: #f6f6f6;
+    --cor-terciaria: #22D4FD;
+    --cor-hover: #272727;
+    --fonte-primaria: 'Krona One', sans-serif;
+    --fonte-secundaria: 'Montserrat', sans-serif;
+}
+
 * {
     margin: 0;
     padding: 0;
 }
-html{
-    box-sizing: border-box;
-}
 
 body {
-    max-height: 100vh;
-    padding: 10%;
     box-sizing: border-box;
-    background-color: #000;
-    color: #F6F6f6;
-    font-family: 'Montserrat', sans-serif;
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+    font-family: var(--fonte-secundaria );
+}
+
+.cabecalho{
+    padding: 2% 0 0 10%;
+}
+
+.cabecalho__menu{
+    display: flex;
+    gap: 80px;
+}
+
+.cabecalho__menu__link{
+    font-family: var(--fonte-secundaria );
+    font-weight: 600;
+    font-size: 24px;
+    color: var(--cor-terciaria);
+    text-decoration: none;
 }
 
 .apresentacao {
     display: flex;
+    padding: 8% 15%;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .apresentacao__content {
@@ -32,11 +54,11 @@ body {
 
 .apresentacao__content-title {
     font-size: 36px;
-    font-family: 'Krona One', sans-serif;
+    font-family: var(--fonte-primaria);
 }
 
 .apresentacao__content-title strong {
-    color: #22D4FD;
+    color: var(--cor-terciaria);
 }
 
 .apresentacao__content-text {
@@ -45,17 +67,42 @@ body {
 
 .apresentacao__content-link {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
     justify-content: space-between;
 }
 
-.apresentacao__content-link__btn {
-    width: 280px;
-    padding: 21.5px 0;
-    text-decoration: none;
-    text-align: center;
-    background-color: #22D4FD;
-    color: #000;
-    font-weight: 600;
-    border-radius: 16px;
+.apresentacao__content-link__title{
+    font-family: var(--fonte-primaria);
     font-size: 24px;
 }
+
+.apresentacao__content-link__btn {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    width: 378px;
+    padding: 16px;
+    text-decoration: none;
+    text-align: center;
+    background-color: transparent;
+    border: 2px solid var(--cor-terciaria);
+    color: var(--cor-secundaria);
+    font-weight: 600;
+    border-radius: 8px;
+    font-size: 24px;
+}
+.apresentacao__content-link__btn:hover{
+    background-color: var(--cor-hover);
+    padding: 3%;
+}
+.rodape{
+    background-color: var(--cor-terciaria);
+    padding: 24px;
+    font-size: 24px;
+    font-family: var(--fonte-secundaria );
+    color: var(--cor-primaria);
+    text-align: center;
+}
+
