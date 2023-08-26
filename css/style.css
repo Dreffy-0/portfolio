@@ -113,15 +113,13 @@ width: 50%;
 }
 
 @media(max-width: 1200px){
-    body{
-        width: 100%;
-    }
     .cabecalho{
         padding: 10%;
     }
 
     .cabecalho__menu{
         justify-content: center;
+        gap: 5%;
     }
 
     .apresentacao{
